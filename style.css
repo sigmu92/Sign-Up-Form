@@ -4,7 +4,7 @@
 }
 
 :root {
-    --left-width: 33%;
+    --left-width: 25%;
     --min-left-width: 300px;
 }
 
@@ -17,6 +17,7 @@ body {
 .left {
     width: var(--left-width);
     min-width: var(--min-left-width);
+    flex-shrink: 0;
 }
 
 #splash{
