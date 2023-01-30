@@ -1,4 +1,59 @@
 @font-face {
     font-family: odin;
-    src: "./fonts/Norse-Bold.otf"
+    src: url('./fonts/Norse-Bold.otf');
+}
+
+:root {
+    --left-width: 33%;
+    --min-left-width: 300px;
+}
+
+body {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.left {
+    width: var(--left-width);
+    min-width: var(--min-left-width);
+}
+
+#splash{
+    position: absolute;
+    width: var(--left-width);
+    min-width: var(--min-left-width);
+    height:100%
+}
+
+.hero {
+    height:15%;
+    width: var(--left-width);
+    min-width: var(--min-left-width);
+    position: absolute;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .3);
+    font-family: odin;
+    top: 11rem;
+    color: white;
+}
+
+.words {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+#logo {
+    max-height: 6rem;
+    width: auto;
+    
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
