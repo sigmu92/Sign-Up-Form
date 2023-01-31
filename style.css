@@ -76,6 +76,7 @@ body {
     justify-content: flex-end;
     padding-left: var(--right-padding);
     background-color: var(--background-color);
+    padding-bottom: 1rem;
 }
 
 .main {
@@ -85,7 +86,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     padding-left: var(--right-padding);
-    padding-top: 2rem;
+    padding-top: 1rem;
     box-shadow: 1px 3px 5px #d3d3d3;
     z-index: 1;
 }
@@ -93,32 +94,27 @@ body {
 form {
     font-family: var(--text-font);
     font-size: 10px;
+    letter-spacing: 1px;
     font-weight: bold;
-    padding: 0;
-    margin: 0;
+
     display: flex;  
 }
 
-fieldset{
-    padding: 0;
-    margin-right: 0;
+fieldset{   
     display: flex;
     flex-direction: column;
     justify-content: center;
     border-style: none;
-    margin-right: 4rem;
+    margin-right: 3.5rem;
 }
 
-input {
-   
-}
 
 .text {
     font-family: var(--text-font);
     font-weight: bolder;
     font-size: 22px;
     width: 50%;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .footer {
@@ -146,12 +142,29 @@ button {
 }
 
 input {
+    outline: none;
     border-style: solid;
     border-radius: 2px;
     border-width: 1px;
     border-color: #d3d3d3;
     height: 1.2rem;
     margin-bottom: 1rem;
+    padding: 1px 5px;
+}
+
+input[type=text]:focus {
+    border: 1px solid blue;
+    box-shadow: 1px 1px 5px #d3d3d3;
+}
+
+input:active {
+    border: 1px solid blue;
+    box-shadow: 1px 1px 5px #d3d3d3;
+}
+
+
+input:invalid {
+    border-style: solid;
 }
 
 a {
