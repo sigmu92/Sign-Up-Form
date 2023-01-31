@@ -79,13 +79,15 @@ body {
 }
 
 .main {
-    height:33%;
+    height:27%;
     width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     padding-left: var(--right-padding);
-    box-shadow: 1px 20px 5px black;
+    padding-top: 2rem;
+    box-shadow: 1px 3px 5px #d3d3d3;
+    z-index: 1;
 }
 
 form {
@@ -108,7 +110,7 @@ fieldset{
 }
 
 input {
-    margin-bottom: 1rem;
+   
 }
 
 .text {
@@ -141,6 +143,15 @@ button {
     font-weight: bolder;
     color: white;
     margin: 2rem 0;
+}
+
+input {
+    border-style: solid;
+    border-radius: 2px;
+    border-width: 1px;
+    border-color: #d3d3d3;
+    height: 1.2rem;
+    margin-bottom: 1rem;
 }
 
 a {
