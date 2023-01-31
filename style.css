@@ -6,6 +6,15 @@
 :root {
     --left-width: 25%;
     --min-left-width: 300px;
+    --right-padding: 2rem;
+    --background-color:#F5F5F4;
+    --text-font: sans-serif;
+    --footer-color: #3f5a36;
+}
+
+* {
+    padding: 0;
+    margin: 0;
 }
 
 body {
@@ -57,4 +66,85 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+}
+
+.header {
+    height: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: var(--right-padding);
+    background-color: var(--background-color);
+}
+
+.main {
+    height:33%;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: var(--right-padding);
+    box-shadow: 1px 20px 5px black;
+}
+
+form {
+    font-family: var(--text-font);
+    font-size: 10px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    display: flex;  
+}
+
+fieldset{
+    padding: 0;
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-style: none;
+    margin-right: 4rem;
+}
+
+input {
+    margin-bottom: 1rem;
+}
+
+.text {
+    font-family: var(--text-font);
+    font-weight: bolder;
+    font-size: 22px;
+    width: 50%;
+    margin-bottom: 2rem;
+}
+
+.footer {
+    font-family: var(--text-font);
+    height: 33%;
+    width: 100vw;
+    padding-left: var(--right-padding);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: var(--background-color);
+    font-size: 15px;
+}
+
+button {
+    background-color: var(--footer-color);
+    width: 14%;
+    height: 15%;
+    border-style: none;
+    border-radius: 5px;
+    font-family: var(--text-font);
+    font-weight: bolder;
+    color: white;
+    margin: 2rem 0;
+}
+
+a {
+    color: var(--footer-color);
+    text-decoration: none;
+    font-weight: bolder;
 }
