@@ -183,6 +183,11 @@ input {
     padding: 1px 5px;
 }
 
+.password:invalid {
+    border: 1px solid red;
+    
+}
+
 label {
     margin-top: 1rem;
 }
