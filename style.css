@@ -74,7 +74,7 @@ body {
 
 .header {
     display: flex;
-    flex: 1 1 auto;
+    height: 35.5%;
     flex-direction: column;
     justify-content: flex-end;
     
@@ -87,7 +87,7 @@ body {
     
     width: 100%;
     display: flex;
-    flex: 0 1 auto;
+    height:29%;
     flex-direction: column;
     justify-content: flex-start;
     
@@ -104,6 +104,7 @@ form {
     font-weight: bold;
     margin-left: var(--right-padding);
     display: flex;  
+    padding-bottom: 1rem;
 }
 
 fieldset{   
@@ -124,11 +125,28 @@ fieldset{
     margin-bottom: 1.5rem;
 }
 
+.form-text {
+    margin-left: var(--right-padding);
+    font-family: var(--text-font);
+    font-weight: bolder;
+    font-size: 22px;
+    width: 50%;
+    margin-bottom: 1.5rem;
+    margin-bottom: 0;;
+}
+
+.invalid-pass {
+    color: white;
+}
+
+.invalid-pass-dummy{
+    color: white;
+}
+
 .footer {
     font-family: var(--text-font);
     flex: 1 1 auto;
     width: 100%;
-    
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -146,6 +164,7 @@ button {
     background-color: var(--footer-color);
     width: 14%;
     height: 15%;
+    min-width: 150px;
     border-style: none;
     border-radius: 5px;
     font-family: var(--text-font);
@@ -161,8 +180,11 @@ input {
     border-width: 1px;
     border-color: #d3d3d3;
     height: 1.2rem;
-    margin-bottom: 1rem;
     padding: 1px 5px;
+}
+
+label {
+    margin-top: 1rem;
 }
 
 input[type=text]:focus {
@@ -178,6 +200,11 @@ input:focus {
 
 input:invalid {
     border-style: solid;
+}
+
+button:active {
+    opacity: 80%;
+    box-shadow: 1px 1px 5px #d3d3d3;
 }
 
 a {
