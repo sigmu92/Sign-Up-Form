@@ -5,11 +5,12 @@
 
 :root {
     --left-width: 25%;
+    --right-width: calc(100%-var(var(--left-width)))
     --min-left-width: 300px;
     --right-padding: 2rem;
     --background-color:#F5F5F4;
     --text-font: sans-serif;
-    --footer-color: #3f5a36;
+    --footer-color:  #0068cd;
 }
 
 * {
@@ -33,7 +34,7 @@ body {
     position: absolute;
     width: var(--left-width);
     min-width: var(--min-left-width);
-    height:100%
+    height:100vh;
 }
 
 .hero {
@@ -61,31 +62,36 @@ body {
     
 }
 
+
 .right {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     height: 100vh;
+    width: 100%;
 }
 
 .header {
-    height: 33%;
     display: flex;
+    flex: 1 1 auto;
     flex-direction: column;
     justify-content: flex-end;
-    padding-left: var(--right-padding);
+    
     background-color: var(--background-color);
     padding-bottom: 1rem;
+    width: auto;
 }
 
 .main {
-    height:27%;
-    width: 100vw;
+    
+    width: 100%;
     display: flex;
+    flex: 0 1 auto;
     flex-direction: column;
     justify-content: flex-start;
-    padding-left: var(--right-padding);
+    
+    padding-right: -20px;
     padding-top: 1rem;
     box-shadow: 1px 3px 5px #d3d3d3;
     z-index: 1;
@@ -96,7 +102,7 @@ form {
     font-size: 10px;
     letter-spacing: 1px;
     font-weight: bold;
-
+    margin-left: var(--right-padding);
     display: flex;  
 }
 
@@ -110,6 +116,7 @@ fieldset{
 
 
 .text {
+    margin-left: var(--right-padding);
     font-family: var(--text-font);
     font-weight: bolder;
     font-size: 22px;
@@ -119,9 +126,9 @@ fieldset{
 
 .footer {
     font-family: var(--text-font);
-    height: 33%;
-    width: 100vw;
-    padding-left: var(--right-padding);
+    flex: 1 1 auto;
+    width: 100%;
+    
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -129,7 +136,13 @@ fieldset{
     font-size: 15px;
 }
 
+.small-text {
+    width:50%;
+    margin-left: var(--right-padding);
+}
+
 button {
+    
     background-color: var(--footer-color);
     width: 14%;
     height: 15%;
@@ -138,7 +151,7 @@ button {
     font-family: var(--text-font);
     font-weight: bolder;
     color: white;
-    margin: 2rem 0;
+    margin: 2rem var(--right-padding);
 }
 
 input {
@@ -157,7 +170,7 @@ input[type=text]:focus {
     box-shadow: 1px 1px 5px #d3d3d3;
 }
 
-input:active {
+input:focus {
     border: 1px solid blue;
     box-shadow: 1px 1px 5px #d3d3d3;
 }
