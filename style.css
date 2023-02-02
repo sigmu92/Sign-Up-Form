@@ -56,6 +56,18 @@ body {
     font-weight: bold;
 }
 
+.credit {
+    position: absolute;
+    top: 97vh;
+    font-size: 10px;
+    left: 8vw;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    
+
+}
+
 #logo {
     max-height: 6rem;
     width: auto;
